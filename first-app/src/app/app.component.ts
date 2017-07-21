@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DragonComponent } from './dragon';
+import { DatabindingComponent } from './databinding/databinding.component';
 
 @Component({
   selector: 'app',

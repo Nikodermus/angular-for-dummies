@@ -2,12 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { DragonComponent } from './dragon/dragon.component';
+import { DatabindingComponent } from './databinding/databinding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DragonComponent
+    DatabindingComponent
   ],
   imports: [
     BrowserModule
