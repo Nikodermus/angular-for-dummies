@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { MycomponentComponent } from './mycomponent.component';
+import { EventBindingComponent } from './event-binding.component';
+import { TwowayBindingComponent } from './twoway-binding.component';
 
 
 @Component({
@@ -11,8 +15,8 @@ export class DatabindingComponent {
   numberInterpolation = 2;
 
   createTest() {
-    var a = Math.random();
-    var b = Math.random();
+    let a = Math.random();
+    let b = Math.random();
     if (a >= b) {
       return true;
     }
@@ -23,13 +27,17 @@ export class DatabindingComponent {
   }
 
   createColor() {
-    var a = Math.random();
-    var b = Math.random();
+    let a = Math.random();
+    let b = Math.random();
     if (a >= b) {
       return 'blue';
     }
     else {
       return 'green';
     }
+  }
+
+  onClicked(value: string) {
+    alert(value);
   }
 }
