@@ -10,4 +10,9 @@ import { Component } from '@angular/core';
   styles: []
 })
 export class TwowayBindingComponent {
+  person = {
+    name: 'Dermus',
+    age: 21
+
+  };
 }
