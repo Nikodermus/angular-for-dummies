@@ -1,0 +1,11 @@
+<!-- <input type="text" (input)="showData($event)"> -->
+<input type="text" [(ngModel)]="server_created">
+
+<h1>{{server_name}}</h1>
+<server></server>
+<server></server>
+<server></server>
+<button class="btn btn-primary" [disabled]="!allow_new_server" (click)="onCreateServer()">
+  Add server
+</button>
+<p>{{server_created}}</p>
