@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 	allow_new_server = false;
-	server_created = 'No server created';
-	server_name = '';
+	server_name = 'Add new server';
+	servers = ['server1', 'server2'];
+	times_showed = [];
 
 	constructor() {
 		setTimeout(() => {
@@ -20,12 +21,13 @@ export class ServersComponent implements OnInit {
 	}
 
 	onCreateServer() {
-		this.server_created = 'We have a new server!';
+		this.servers.push('server_name');
+		this.server_name = 'Add new server';
 	}
 
-	showData(e) {
-		this.server_name = (<HTMLInputElement>e.target).value;
-		console.log(e.target.value);
+	timesShowed() {
+		this.times_showed.push(new Date());
 	}
+
 
 }

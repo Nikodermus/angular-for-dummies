@@ -1,5 +1,4 @@
 <h2>Server Comp</h2>
-Server {{server_id}} is {{server_status}}
-<p>
-  {{getServerCollection()}}
+<p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{online: server_status === 'up'}">
+  Server {{server_id}} is {{server_status}}
 </p>

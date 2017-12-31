@@ -1,11 +1,18 @@
-<!-- <input type="text" (input)="showData($event)"> -->
-<input type="text" [(ngModel)]="server_created">
+<!-- <input type="text" [(ngModel)]="server_created">
 
 <h1>{{server_name}}</h1>
-<server></server>
-<server></server>
-<server></server>
+
+<app-server *ngFor="let server of servers"></app-server>
 <button class="btn btn-primary" [disabled]="!allow_new_server" (click)="onCreateServer()">
   Add server
+</button> -->
+<button (click)="visible = !visible; timesShowed();">
+  <span *ngIf="!visible">Display</span>
+  <span *ngIf="visible">Hide</span> Details
 </button>
-<p>{{server_created}}</p>
+<p *ngIf="visible">Secret password: Dark Knight</p>
+<ul>
+  <li *ngFor="let times of times_showed; let i = index;" [ngClass]="{
+		blueBack: i >= 4
+	}">{{times}}</li>
+</ul>
