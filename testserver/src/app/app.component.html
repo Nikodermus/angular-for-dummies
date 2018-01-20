@@ -1,0 +1,10 @@
+<div class="container">
+  <app-sever-creator (serverCreated)="onServerCreated($event)" (bluePrintCreated)="onbluePrintCreated($event)"></app-sever-creator>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-sever-element *ngFor="let server_element of serverElements" [srv_element]="server_element">
+      </app-sever-element>
+    </div>
+  </div>
+
+</div>

@@ -4,6 +4,7 @@
     "angular"
   ],
   "rules": {
-    "angular/controller_name": 0
+    "angular/controller_name": 0,
+    "indent": ["error", 2]
   }
 }
