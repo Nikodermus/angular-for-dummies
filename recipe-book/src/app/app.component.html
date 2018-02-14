@@ -1,5 +1,6 @@
-<app-header></app-header>
+<app-header (currentActive)="setActive($event)">
+</app-header>
 <div class="container">
-  <app-recipes></app-recipes>
-  <app-shopping-list></app-shopping-list>
+  <app-recipes *ngIf="active === 'recipes'"></app-recipes>
+  <app-shopping-list *ngIf="active === 'shopping_list'"></app-shopping-list>
 </div>
