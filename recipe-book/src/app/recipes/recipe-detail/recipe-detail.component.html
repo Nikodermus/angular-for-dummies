@@ -4,8 +4,8 @@
     <img src="" alt="" class="img-responsive">
   </div>
 
-  <div class="col-xs-12 col-sm-12 col-md-12 `col-lg-12">
-    <h1>Recipe name</h1>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <h1> {{current_detail.name}}</h1>
   </div>
 
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -29,10 +29,11 @@
   </div>
 
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    Description
+    {{current_detail.description}}
   </div>
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    Ingredients
+    <img src="{{current_detail.image_path}}" alt="" class="img-responsive">
+
   </div>
 
 </div>

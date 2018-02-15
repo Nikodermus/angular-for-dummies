@@ -1,12 +1,15 @@
 <div class="row">
 
   <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-    <app-recipe-list></app-recipe-list>
-
+    <app-recipe-list (current_recipe)="showDetails($event)"></app-recipe-list>
   </div>
 
   <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-    <app-recipe-detail></app-recipe-detail>
+    <app-recipe-detail [current_detail]="current_detail" *ngIf="current_detail; else info_text">
+    </app-recipe-detail>
+    <ng-template #info_text>
+      <h1>Select a recipe!</h1>
+    </ng-template>
   </div>
 
 </div>
